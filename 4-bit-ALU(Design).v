@@ -27,11 +27,13 @@ always @(*) begin
             y=a&b; 
             full_result=a&b;
             v = 1'b0;
+            c = 1'b0;
         end
         2'b11: begin
             y=a|b; 
             full_result=a|b;
             v = 1'b0;
+            c = 1'b0;
         end
     endcase
 
