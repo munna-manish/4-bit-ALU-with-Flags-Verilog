@@ -7,7 +7,8 @@ module alu(
     output reg [4:0] full_result,
     output reg k,
     output reg n,
-    output reg c
+    output reg c,
+    output reg v
 );
 
 always @(*) begin
@@ -15,18 +16,22 @@ always @(*) begin
         2'b00: begin
             y=a+b;
             full_result=a+b;
+            v = (a[3]==b[3]) && (y[3]!=a[3]);
         end
         2'b01: begin
             y=a-b;
             full_result=a-b;
+            v = (a[3]!=b[3]) && (y[3]!=a[3]);
         end
         2'b10: begin
             y=a&b; 
             full_result=a&b;
+            v = 1'b0;
         end
         2'b11: begin
             y=a|b; 
             full_result=a|b;
+            v = 1'b0;
         end
     endcase
 
