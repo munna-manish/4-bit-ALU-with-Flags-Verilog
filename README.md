@@ -5,7 +5,7 @@ A synthesizable 4-bit Arithmetic Logic Unit (ALU) designed in Verilog. This proj
 
 ## Features
 - **Arithmetic Operations:** Addition, Subtraction (2's Complement).
-- **Logical Operations:** AND, OR, XOR, NOT.
+- **Logical Operations:** AND, OR.
 - **Status Flags:**
   - **Zero (k):** Set if result is 0.
   - **Carry (C):** Set if an unsigned carry occurs.
